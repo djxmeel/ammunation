@@ -212,7 +212,6 @@ body {
     width: 45px;
     padding-right: 50px;
     font-size: 45px;
-    border-right: 5px inset var(--secondary);
 }
 
 .profile .profile_details .name_role {
