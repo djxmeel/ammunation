@@ -1,5 +1,5 @@
 <?php
-    require_once("../sql.php");
+    require_once("../modules/sql.php");
 
     session_start();
 
@@ -10,7 +10,7 @@
         if(empty($username)) $_SESSION["emptyuser"] = true;  // if 1 or both empty, return to login page
         if(empty($password)) $_SESSION["emptypass"] = true;  // with suitable message
 
-        header("Location: login.php");
+        header("Location: ../login/login.php");
 
         exit();
     }
@@ -31,11 +31,11 @@
         }
             $_SESSION["username"] = $username;
             
-            header("Location: ../index.php");
+            header("Location: ../index/index.php");
             exit();
     }
 
     $_SESSION["nocredentials"] = true;
-    header("Location: login.php");
+    header("Location: ../login/login.php");
 
 ?>
