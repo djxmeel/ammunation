@@ -36,35 +36,35 @@
                 </form>
             </li>
             <li>
-                <a href="">
+                <a href="index.php">
                     <i class='bx bx-grid-alt' ></i>
                     <span class="links_name">Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="">
+                <a href="product/product_list.php">
                     <i class='bx bx-cross'></i>
                     <span class="links_name">Products</span>
                 </a>
                 <span class="tooltip">Products</span>
             </li>
             <li>
-                <a href="">
+                <a href="categories/category_list.php">
                     <i class='bx bx-folder'></i>
                     <span class="links_name">Categories</span>
                 </a>
                 <span class="tooltip">Categories</span>
             </li>
             <li>
-                <a href="">
+                <a href="customer/customer_list.php">
                     <i class='bx bx-group' ></i>
                     <span class="links_name">Customers</span>
                 </a>
                 <span class="tooltip">Customers</span>
             </li>
             <li>
-                <a href="">
+                <a href="purchases/purchases_list.php">
                     <i class='bx bx-money-withdraw' ></i>
                     <span class="links_name">Invoices</span>
                 </a>
@@ -73,7 +73,7 @@
             <?php
             if($_SESSION["loggedAs"] === "Admin"){
                 echo "<li>
-                        <a href=''>
+                        <a href='admin/users.php'>
                             <i class='bx bx-user-circle' ></i>
                             <span class='links_name'>Users</span>
                         </a>
