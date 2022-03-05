@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="../js/chart.min.js"></script>
 </head>
 <body>
     <?php
         session_start();
         
-        if(isset($_POST["logout"])){ // Unsets the login if logout button is submitted
+        if(isset($_GET["logout"])){ // Unsets the login if logout button is submitted
             unset($_SESSION["loggedAs"]);
-            unset($_POST["logout"]);
+            unset($_GET["logout"]);
         }
 
         if(!isset($_SESSION["loggedAs"])){
@@ -91,7 +92,9 @@
                         <div class="role"><?php echo $_SESSION["loggedAs"] ?></div>
                     </div>
                 </div>
-                <i class='bx bx-log-out' id="log_out"></i>
+                <a href="../index/index.php?logout=1">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                </a>
             </div>
         </div>
     </div>
