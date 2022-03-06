@@ -20,7 +20,8 @@ body {
     position: relative;
     width: 100%;
     min-height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background: var(--bg-darker);
 }
 
@@ -252,7 +253,7 @@ body {
 }
 
 .home_content{
-    position: absolute;
+    position: relative;
     height: 100%;
     width: calc(100% - 78px);
     left: 78px;
@@ -272,7 +273,7 @@ body {
    font-size: inherit;
 }
 
-.home_content h1 .bx-cross {
+.home_content h1 .bxs-star {
     color: var(--primary-light);
     font-size: 25px;
  }

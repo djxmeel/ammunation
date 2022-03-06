@@ -2,6 +2,48 @@ main section div canvas {
     float: left;
 }
 
-aside .about-us{
-    padding: 0 2em;
+section.dash-left, section.dash-right{
+    padding: 0 3.5rem;
+    color: var(--white);
+}
+
+ul.counter li{
+    font-size: 1.5rem;
+    list-style:square;
+}
+
+section.dash-right {
+    text-align: center;
+}
+
+section .shops img {
+    margin: 0.8em;
+}
+
+section.quick-access {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+section.quick-access .links {
+    display: flex;
+    text-decoration: inherit;
+}
+
+section.quick-access .links input[type="button"]{
+    padding: 1em;
+    margin: 0 1em;
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--secondary);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+section.quick-access .links input[type="button"]:hover {
+    background: var(--primary-dark);
+    transform: translateY(-0.2em);
 }
