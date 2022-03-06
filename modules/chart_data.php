@@ -47,9 +47,4 @@
         document.getElementById('myChart'),
         config
         );
-
-        const myChart2 = new Chart(
-        document.getElementById('myChart2'),
-        config
-        );
     </script>
