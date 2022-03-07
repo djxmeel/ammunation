@@ -1,8 +1,8 @@
 <?php require_once("../modules/header.php");
 require_once("../modules/sql.php");?>
-
+<title>WELCOME TO AMMUNATION</title>
 <main class="home_content">
-    <h1>WELCOME TO AMMUNATION <?php echo strtoupper($_SESSION["username"]) ?> <i class='bx bxs-star'></i></h1>
+    <h1>WELCOME TO AMMUNATION <?php echo strtoupper($_SESSION["username"]) ?> <i class='bx bx-crosshair'></i></h1>
     <article class="dash-content row">
         <section class="dash-left col-12 col-md-5">
             <h1>Products</h1>

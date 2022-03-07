@@ -2,7 +2,7 @@
     $hostname="localhost";
     $db_username="root";
     $db_password="";
-    $database="ammunation";
+    $database="ammunition";
 
     $con = new mysqli($hostname, $db_username, $db_password, $database);
 
