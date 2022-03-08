@@ -8,6 +8,7 @@
     --secondary-dark: rgb(117, 19, 19);
     --white: rgb(255, 238, 238);
     --bg-dark: rgb(114, 114, 114);
+    --bg-darker: rgb(70, 70, 70);
 }
 
 html,input {
@@ -19,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-darker);
     height: 100vh;
 }
 
