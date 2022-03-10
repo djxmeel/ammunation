@@ -2,7 +2,7 @@
         require_once("../modules/sql.php");?>
 <title>AMMUNATION: Customers</title>
 <main class="home_content">
-    <h1>Customers <i class="bx bxs-star"></i></h1>
+    <h1>Selling history <i class="bx bxs-star"></i></h1>
     <section class="category-list">
         <table>
             <tr>
@@ -26,9 +26,6 @@
                 } 
             ?>
         </table>
-    </section>
-    <section class="quick-access in">
-            <a class="links" href="customer_list_update.php"><input type="button" value="Add customer"></a> 
     </section>
 </main>
 </body>

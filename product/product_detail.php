@@ -47,8 +47,6 @@
             ?>
         </table>
     </section>
-    <section class="quick-access">
-    </section>
 </main>
 </body>
 </html>
