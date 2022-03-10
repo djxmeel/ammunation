@@ -115,10 +115,12 @@ img.category-icon {
 
 img.product-image {
     width: 100px;
+    filter: drop-shadow(5px 10px 5px #222);
 }
 
 img.product-image-big{
     width: 100%;
+    filter: drop-shadow(5px 10px 5px #222);
 }
 
 tr .category-options {

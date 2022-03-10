@@ -2,7 +2,7 @@
         session_start();
 
         if(isset($_SESSION["loggedAs"])){
-            header("Location: ../index.php");
+            header("Location: ../index/index.php");
             exit();
         } 
 ?>
