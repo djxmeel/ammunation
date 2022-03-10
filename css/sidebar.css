@@ -273,6 +273,11 @@ body {
    font-size: inherit;
 }
 
+.home_content h2::first-letter {
+    color: var(--secondary);
+    font-size: inherit;
+ }
+
 .home_content h1 .bxs-star {
     color: var(--primary-light);
     font-size: 25px;
