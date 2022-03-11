@@ -14,12 +14,25 @@
 
                     $query2 = "SELECT DISTINCT nombre FROM productos WHERE id_categoria=9";
 
+                    $query3 = "SELECT * FROM categorias";
+
                     function ammoSelect($query, $con) {
                         $result = $con->query($query);
                         $sentence = "";
 
                         while($row = $result->fetch_assoc()){
                             $sentence = $sentence . "<option value='".$row["nombre"]."'>".$row["nombre"]."</option>";
+                        }
+
+                        return $sentence;
+                    }
+
+                    function categorySelect($query, $con) {
+                        $result = $con->query($query);
+                        $sentence = "";
+
+                        while($row = $result->fetch_assoc()){
+                            $sentence = $sentence . "<option value='".$row["id"]."'>".$row["nombre"]."</option>";
                         }
 
                         return $sentence;
@@ -39,6 +52,14 @@
                             <tr>
                                 <th><h2>Name: </h2></th>
                                 <td><input name='p_name' type='text' value='".$row["nombre"]."'/></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Category: </h2></td>
+                                <td>
+                                    <select name='p_categoryList'>
+                                        ".categorySelect($query3, $con)."
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td><h2>Description: </h2></td>
