@@ -31,11 +31,11 @@
                             <td>".$row["contacto"]."</td>
                         </tr>
                         <tr>
-                            <td>Register date : </td>
+                            <td><h2>Register date : </h2></td>
                             <td>".$row["fecha_alta"]."</td>
                         </tr>
                         <tr>
-                            <td colspan='2'><a class='links' href='customer_list_update.php?id=".$row["dni"]."'><input type='button' value='Edit'></a></td>
+                            <td colspan='2'><a class='links' href='customer_list_update.php?dni=".$row["dni"]."'><input type='button' value='Edit'></a></td>
                         </tr>";
                 } 
             ?>

@@ -29,7 +29,7 @@
                                 <td colspan='2'><img class='product-image-big' src='../img/guns/".$row["img"]."'/><td>
                             <tr>
                             <tr>
-                                <td><h2>File: </h2></td>
+                                <td><h2>Image: </h2></td>
                                 <td><input type='file' name='p_image'/></td>
                             </tr>
                             <tr>
@@ -82,7 +82,7 @@
                         }
                     ?>
                     <tr>
-                        <td><h2>File: </h2></td>
+                        <td><h2>Image: </h2></td>
                         <td><input type='file' name='p_image'/></td>
                     </tr>
                     <tr>

@@ -9,7 +9,6 @@
         if(isset($_FILES["p_image"]) && !empty($_FILES["p_image"]["name"])) {
             
             $target_file = ROUTE . $_FILES["p_image"]["name"];
-            $imageExt = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
             $isImage = getimagesize($_FILES["p_image"]["tmp_name"]);
             
@@ -25,17 +24,21 @@
                 }
             }
 
-            if(!$isUploaded){
+            if($isUploaded === false){
                 header("Location: product_list_update.php?id=". $_GET["id"]);
                 $_SESSION["notUploaded"] = true;
                 exit();
             }
 
+            $stmt = $con->prepare("UPDATE productos SET img=? WHERE id=" . $_GET["id"]);
+            $stmt->bind_param("s", $_FILES["p_image"]["name"]);
+            $stmt->execute();
+
         }
 
-        $stmt= $con->prepare("UPDATE productos SET nombre=?, id_categoria=?, descripcion=?, stock=?, precio=?, ammo=?, img=? WHERE id=".$_GET["id"]); //prepare statement
+        $stmt= $con->prepare("UPDATE productos SET nombre=?, id_categoria=?, descripcion=?, stock=?, precio=?, ammo=? WHERE id=".$_GET["id"]); //prepare statement
 
-        $stmt->bind_param("sssssss", $_POST["p_name"], $_POST["p_categoryList"], $_POST["p_desc"], $_POST["p_stock"], $_POST["p_cost"], $_POST["p_ammoList"], $_FILES["p_image"]["name"]); // bind parameters (string, string)
+        $stmt->bind_param("ssssss", $_POST["p_name"], $_POST["p_categoryList"], $_POST["p_desc"], $_POST["p_stock"], $_POST["p_cost"], $_POST["p_ammoList"]); // bind parameters (string, string)
         $stmt->execute();
         
         // TODO file upload
@@ -53,7 +56,6 @@
         if(isset($_FILES["p_image"]) && !empty($_FILES["p_image"]["name"])) {
             
             $target_file = ROUTE . $_FILES["p_image"]["name"];
-            $imageExt = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
             $isImage = getimagesize($_FILES["p_image"]["tmp_name"]);
             

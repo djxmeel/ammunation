@@ -14,6 +14,14 @@
                 <th>Delete</th>
             </tr>
             <?php
+                if(isset($_GET["deleteid"])){
+                    $stmt= $con->prepare("DELETE FROM clientes WHERE dni=?");
+                    $stmt->bind_param("s", $_GET["deleteid"]); // bind parameters (string)
+                    $stmt->execute();
+                    
+                    unset($_GET["deleteid"]);
+                }
+
                 $query = "SELECT dni,nombre,apellido1,apellido2 FROM clientes";
 
                 $result = $con->query($query);
@@ -25,7 +33,7 @@
                             <td class ='category-options'>". $row["apellido1"]." ". $row["apellido2"] ."</td>
                             <td><a class='category-options details' href='customer_detail.php?dni=".$row["dni"]."'><i class='bx bx-info-circle' ></i></a></td>
                             <td><a class='category-options edit' href='customer_list_update.php?dni=".$row["dni"]."'><i class='bx bx-edit-alt' ></i></a></td>
-                            <td><a class='category-options delete' href='customer_list_update.php?deleteid=".$row["dni"]."'><i class='bx bx-x' ></i></a></td>
+                            <td><a class='category-options delete' href='customer_list.php?deleteid=".$row["dni"]."'><i class='bx bx-x' ></i></a></td>
                         <tr>";
                 } 
             ?>
