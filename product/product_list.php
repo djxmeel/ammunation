@@ -26,7 +26,7 @@
                 if(isset($_GET["search"])){
 
                     $_GET["search"] = $con->real_escape_string($_GET["search"]);
-                    $query = "SELECT id,nombre,img,precio FROM productos WHERE nombre='".$_GET["search"]."'";
+                    $query = "SELECT id,nombre,img,precio FROM productos WHERE nombre LIKE'%".$_GET["search"]."%'";
 
                 } else $query = "SELECT id,nombre,img,precio FROM productos";
                 
