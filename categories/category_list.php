@@ -31,7 +31,7 @@
                             <td class ='category-icon'><img class='category-icon' src='../img/icons/".$row["img"]."'/></td>
                             <td><a class='category-options details' href='category_detail.php?id=".$row["id"]."'><i class='bx bx-info-circle' ></i></a></td>
                             <td><a class='category-options edit' href='category_list_update.php?id=".$row["id"]."'><i class='bx bx-edit-alt' ></i></a></td>
-                            <td><a class='category-options delete' href='category_list.php?deleteid=".$row["id"]."'><i class='bx bx-x' ></i></a></td>
+                            <td><a class='category-options delete' onClick=\"return confirm('Are you sure?')\" href='category_list.php?deleteid=".$row["id"]."'><i class='bx bx-x' ></i></a></td>
                         <tr>";
                 } 
             ?>

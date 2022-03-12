@@ -13,6 +13,14 @@
                 <th>Delete</th>
             </tr>
             <?php
+                if(isset($_GET["deleteid"])){
+                    $stmt= $con->prepare("DELETE FROM empleados WHERE id=?");
+                    $stmt->bind_param("s", $_GET["deleteid"]); // bind parameters (string)
+                    $stmt->execute();
+                    
+                    unset($_GET["deleteid"]);
+                }
+
                 $query = "SELECT id,usuario, isadmin FROM empleados";
 
                 $result = $con->query($query);
@@ -23,8 +31,8 @@
                             <td class='category-options'>". $row["usuario"] ."</td>
                             <td class='category-options'>";if($row["isadmin"]) echo "yes"; else echo "no";
                     echo    "</td>
-                            <td><a class='category-options edit' href='product_list_update.php?id=".$row["id"]."'><i class='bx bx-edit-alt' ></i></a></td>
-                            <td><a class='category-options delete' href='product_list_update.php?deleteid=".$row["id"]."'><i class='bx bx-x' ></i></a></td>
+                            <td><a class='category-options edit' href='users_update.php?id=".$row["id"]."'><i class='bx bx-edit-alt' ></i></a></td>
+                            <td><a class='category-options delete' onClick=\"return confirm('Are you sure?')\" href='users.php?deleteid=".$row["id"]."'><i class='bx bx-x' ></i></a></td>
                         <tr>";
                 } 
             ?>
