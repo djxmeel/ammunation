@@ -22,11 +22,11 @@
                             "
                             <tr>
                                 <th><h2>Username: </h2></th>
-                                <td><input name='username' type='text' value='".$row["usuario"]."'/></td>
+                                <td><input name='username' type='text' value='". $row["usuario"] ."'/></td>
                             </tr>
                             <tr>
                                 <td><h2>Password: </h2></td>
-                                <td><input name='password' type='text' value='".$row["pass"]."'/></td>
+                                <td><input name='password' type='password' value='".$row["pass"]."'/></td>
                             </tr>
                             <tr>
                                 <td><h2>Admin: </h2></td>
@@ -53,7 +53,7 @@
                 </tr>
                 <tr>
                     <td><h2>Password: </h2></td>
-                    <td><input name='password' type='text'/></td>
+                    <td><input name='password' type='password'/></td>
                 </tr>
                 <tr>
                     <td><h2>Admin: </h2></td>
