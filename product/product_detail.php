@@ -7,21 +7,6 @@
     <section class="product-details">
         <table>
         <?php
-                if(isset($_POST["confirm_p_edit"])){
-                    $stmt= $con->prepare("UPDATE productos SET nombre=?, id_categoria=?, descripcion=?, stock=?, precio=?, ammo=?, img=? WHERE id=".$_GET["id"]); //prepare statement
-
-                    $stmt->bind_param("sssssss", $_POST["p_name"], $_POST["p_categoryList"], $_POST["p_desc"], $_POST["p_stock"], $_POST["p_cost"], $_POST["p_ammoList"], $_FILES["p_image"]["name"]); // bind parameters (string, string)
-                    $stmt->execute();
-                    echo "<tr>
-                            <td colspan=2>Product Edited!</td>
-                        </tr>";
-
-                    unset($_POST["confirm_p_edit"]);
-                    unset($_POST["p_name"], $_POST["p_categoryList"], $_POST["p_desc"], 
-                            $_POST["p_stock"], $_POST["p_cost"], $_POST["p_ammoList"], 
-                                $_FILES["p_image"], $_POST["p_image"]); 
-                }
-
                 $_GET["id"] = $con->real_escape_string($_GET["id"]);
 
                 $query = "SELECT * FROM productos WHERE id=". $_GET["id"];

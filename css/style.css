@@ -167,15 +167,10 @@ section.product-details {
     height: auto;
     transition: all 0.3s ease-in;
 }
-@media (max-width: 550px){
-    section.product-details {
-        width: 100%;
-    }
-}
 
 section.product-details > *{
     color: var(--white);
-    text-align: center;
+    text-align: left;
 }
 
 section.product-details tr {
@@ -191,6 +186,20 @@ section.product-details tr > *{
     padding: 0.5em;
 }
 
+@media (max-width: 550px){
+    section.product-details tr > *{
+        padding: 0.5em 0;
+    }
+
+    section.product-details {
+        width: 100%;
+    }
+
+    td .links {
+        width:60%;
+    }
+}
+
 .flex-column-center {
     display: flex;
     flex-direction: column;
@@ -198,3 +207,10 @@ section.product-details tr > *{
     align-items: center;
 }
 
+form {
+    width: 100%;
+}
+
+form > * {
+    margin: auto;
+}

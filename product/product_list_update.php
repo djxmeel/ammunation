@@ -4,15 +4,20 @@
         require_once("../modules/sql.php");
         require_once("../modules/opt_lists.php");?>
 <main class="home_content flex-column-center">
-    <h1>Edit product data<i class="bx bxs-star"></i></h1>
+    <h1>Edit product data <i class="bx bxs-star"></i></h1>
     <section class="product-details">
             <?php
                 if(isset($_GET["id"])){
 
                     $_GET["id"] = $con->real_escape_string($_GET["id"]);
                     
-                    echo "<form method='POST' enctype='multipart/form-data' action='product_detail.php?id=".$_GET['id']."'>
+                    echo "<form method='POST' enctype='multipart/form-data' action='product_edit_process.php?id=".$_GET['id']."'>
                             <table>";
+                    
+                    if(isset($_SESSION["notUploaded"])){
+                        echo "<tr><td colspan=2>File is not an image!</td></tr>";
+                        unset($_SESSION["notUploaded"]);
+                    }
 
                     $query = "SELECT * FROM productos WHERE id=". $_GET["id"];
     
@@ -68,8 +73,14 @@
                     } 
                 } else {
             ?>
-            <form method='POST' enctype='multipart/form-data' action='product_list.php'>
+            <form method='POST' enctype='multipart/form-data' action='product_edit_process.php'>
                 <table>
+                    <?php 
+                        if(isset($_SESSION["notUploaded"])){
+                            echo "<tr><td colspan=2>File is not an image!</td></tr>";
+                            unset($_SESSION["notUploaded"]);
+                        }
+                    ?>
                     <tr>
                         <td><h2>File: </h2></td>
                         <td><input type='file' name='p_image'/></td>
@@ -108,7 +119,7 @@
                         <td><input name='p_cost' type='text' value=''/></td>
                     </tr>
                     <tr>
-                        <td colspan='2'><input name='confirm_p_edit' class='links' type='submit' value='Confirm'></td>
+                        <td colspan='2'><input name='confirm_p_add' class='links' type='submit' value='Confirm'></td>
                     </tr>
                 </table>
             </form>

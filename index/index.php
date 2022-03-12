@@ -25,7 +25,7 @@ require_once("../modules/sql.php");?>
                     $swap = true;
                     while($row = $result->fetch_assoc()){
                         if($swap) echo "<li> Admins : " . $row["count"] . "</li>";
-                        else echo "<li> Empleados : " . $row["count"] . "</li>";
+                        else echo "<li> Employees : " . $row["count"] . "</li>";
                         $swap = false;
                     }
                 ?>
