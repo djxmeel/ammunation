@@ -32,8 +32,8 @@
         <ul class="nav_list">
             <li>
                 <i class='bx bx-search-alt' ></i>
-                <form action="">
-                    <input type="text" placeholder="Search..." name="search" id="">
+                <form action="../product/product_list.php" method="GET">
+                    <input type="text" placeholder="Search..." name="search" id="search">
                 </form>
             </li>
             <li>

@@ -23,9 +23,13 @@
                     unset($_GET["deleteid"]);
                 }
 
+                if(isset($_GET["search"])){
 
-                $query = "SELECT id,nombre,img,precio FROM productos";
+                    $_GET["search"] = $con->real_escape_string($_GET["search"]);
+                    $query = "SELECT id,nombre,img,precio FROM productos WHERE nombre='".$_GET["search"]."'";
 
+                } else $query = "SELECT id,nombre,img,precio FROM productos";
+                
                 $result = $con->query($query);
 
                 while($row = $result->fetch_assoc()){
