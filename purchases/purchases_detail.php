@@ -16,8 +16,9 @@
                     while($row = $result->fetch_assoc()){
                         echo 
                             "<tr>
-                                <th colspan=4><h1>Invoice ID: ".$row["id"]."</h1></th>
-                            </tr>
+                                <th colspan=2><h1>Invoice ID: ".$row["id"]."</h1></th>
+                                <th colspan=3>"; if($row["estado"]) echo "<i class='bx bxs-check-square'></i>"; else echo "<i class='bx bxs-x-square' ></i></th>";
+                        echo"</tr>
                             <tr>
                                 <td colspan=2><h1>Day:</h1></td>
                                 <td colspan=3>".$row["fecha"]."</td>
