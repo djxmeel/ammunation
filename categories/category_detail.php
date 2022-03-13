@@ -29,7 +29,8 @@
                             </tr>
                             </tr>
                             <tr>
-                                <td colspan=6><a class='links' href='category_list_update.php?id=".$row["id"]."'><input type='button' value='Edit'></a></td>
+                                <td colspan=2><a class='links' href='category_list.php'><input type='button' value='<< Back'></a></td>    
+                                <td colspan=4><a class='links' href='category_list_update.php?id=".$row["id"]."'><input type='button' value='Edit'></a></td>
                             </tr>";
                     }
                 ?>

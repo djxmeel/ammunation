@@ -41,7 +41,8 @@
                             <td><h1>".$row["precio"]."$</h1></td>
                         </tr>
                         <tr>
-                            <td colspan='2'><a class='links' href='product_list_update.php?id=".$row["id"]."'><input type='button' value='Edit'></a></td>
+                            <td><a class='links' href='product_list.php'><input type='button' value='<< Back'></a></td>
+                            <td><a class='links' href='product_list_update.php?id=".$row["id"]."'><input type='button' value='Edit'></a></td>
                         </tr>";
                 } 
             ?>

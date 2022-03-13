@@ -38,7 +38,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan='2'><input name='confirm_c_edit' class='links' type='submit' value='Confirm'></td>
+                                <td><a href='users.php'><input class='links' type='button' value='<< Back'></a></td>
+                                <td><input name='confirm_c_edit' class='links' type='submit' value='Confirm'></td>
                             </tr>
                         </table>
                     </form>";
@@ -65,7 +66,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan='2'><input name='confirm_c_add' class='links' type='submit' value='Confirm'></td>
+                    <td><a href='users.php'><input class='links' type='button' value='<< Back'></a></td>
+                    <td><input name='confirm_c_add' class='links' type='submit' value='Confirm'></td>
                 </tr>
             </table>
         </form>

@@ -2,6 +2,11 @@ main section div canvas {
     float: left;
 }
 
+a {
+    
+    color: inherit;
+}
+
 h1 .bx-crosshair {
     font-size: inherit;
     color: var(--primary-light);

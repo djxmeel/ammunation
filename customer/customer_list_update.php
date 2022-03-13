@@ -44,7 +44,8 @@
                                 <td><input name='c_contact' type='text' value='".$row["contacto"]."'/></td>
                             </tr>
                             <tr>
-                                <td colspan='2'><input name='confirm_c_edit' class='links' type='submit' value='Confirm'></td>
+                                <td><a href='customer_list.php'><input class='links' type='button' value='<< Back'></a></td>
+                                <td><input name='confirm_c_edit' class='links' type='submit' value='Confirm'></td>
                             </tr>
                         </table>
                     </form>";
@@ -82,7 +83,8 @@
                         <td><input name='c_date' type='date'/></td>
                     </tr>
                     <tr>
-                        <td colspan='2'><input name='confirm_c_add' class='links' type='submit' value='Confirm'></td>
+                        <td><a href='customer_list.php'><input class='links' type='button' value='<< Back'></a></td>
+                        <td><input name='confirm_c_add' class='links' type='submit' value='Confirm'></td>
                     </tr>
                 </table>
             </form>

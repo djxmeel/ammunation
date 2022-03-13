@@ -40,7 +40,8 @@
                                 <td><input name='c_desc' type='textarea' value='".$row["descripcion"]."'/></td>
                             </tr>
                             <tr>
-                                <td colspan='2'><input name='confirm_c_edit' class='links' type='submit' value='Confirm'></td>
+                                <td><a href='category_list.php'><input class='links' type='button' value='<< Back'></a></td>
+                                <td><input name='confirm_c_edit' class='links' type='submit' value='Confirm'></td>
                             </tr>
                         </table>
                     </form>";
@@ -68,7 +69,8 @@
                         <td><input name='c_desc' type='textarea' value=''/></td>
                     </tr>
                     <tr>
-                        <td colspan='2'><input name='confirm_c_add' class='links' type='submit' value='Confirm'></td>
+                    <td><a href='category_list.php'><input class='links' type='button' value='<< Back'></a></td>
+                        <td><input name='confirm_c_add' class='links' type='submit' value='Confirm'></td>
                     </tr>
                 </table>
             </form>

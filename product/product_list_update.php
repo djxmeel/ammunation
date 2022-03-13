@@ -66,7 +66,8 @@
                                 <td><input name='p_cost' type='text' value='".$row["precio"]."'/></td>
                             </tr>
                             <tr>
-                                <td colspan='2'><input name='confirm_p_edit' class='links' type='submit' value='Confirm'></td>
+                                <td><a href='product_list.php'><input type='button' class='links' value='<< Back'></a></td>
+                                <td><input name='confirm_p_edit' class='links' type='submit' value='Confirm'></td>
                             </tr>
                         </table>
                     </form>";
@@ -119,7 +120,8 @@
                         <td><input name='p_cost' type='text' value=''/></td>
                     </tr>
                     <tr>
-                        <td colspan='2'><input name='confirm_p_add' class='links' type='submit' value='Confirm'></td>
+                        <td><a href='product_list.php'><input type='button' class="links" value='<< Back'></a></td>
+                        <td><input name='confirm_p_add' class='links' type='submit' value='Confirm'></td>
                     </tr>
                 </table>
             </form>

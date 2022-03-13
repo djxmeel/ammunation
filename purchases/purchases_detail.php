@@ -21,15 +21,17 @@
                             <tr>
                                 <td colspan=2><h1>Day:</h1></td>
                                 <td colspan=3>".$row["fecha"]."</td>
-                            <tr>
+                            </tr>
                             <tr>
                                 <td colspan=2><h1>Customer's DNI:</h1></td>
-                                <td colspan=3>".$row["dni_cliente"]."</td>
+                                <td colspan=3><a href='../customer/customer_detail.php?dni=".$row["dni_cliente"]."'>".$row["dni_cliente"]." >></a></td>
                             </tr>
                             <tr>
                                 <td colspan=2><h1>Total:</h1></td>
                                 <td colspan=3>".$row["importe"]."</td>
                             </tr>
+                            <tr>
+                                <td><a class='links' href='purchases_list.php'><input type='button' value='<< Back'></a></td>
                             </tr>";
                     }
                 ?>
