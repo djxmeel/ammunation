@@ -3,6 +3,7 @@
 <title>AMMUNATION: Products</title>
 <main class="home_content">
     <h1>Products <i class="bx bxs-star"></i></h1>
+    <input class="links print" type="button" value="Print" onclick="window.print()"> 
     <section class="category-list">
         <table>
             <tr>
