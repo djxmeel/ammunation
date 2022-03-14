@@ -1,4 +1,3 @@
-
 <title>WELCOME TO AMMUNATION</title>
 <?php require_once("../modules/header.php");
         require_once("../modules/sql.php");?>
@@ -11,9 +10,24 @@
 
                     $query = "SELECT * FROM compras WHERE id=". $_GET["id"];
 
+                    if(isset($_GET["deliver"])){
+
+                        $result = $con->query($query);
+
+                        while($row = $result->fetch_assoc()){
+                                $stmt= $con->prepare("UPDATE compras SET estado=? WHERE id=".$_GET["id"]); //prepare statement
+                                $state = true;
+                                if($row["estado"]) $state= false;
+
+                                $stmt->bind_param("i", $state);
+                                $stmt->execute();
+                            }
+                    }
+
                     $result = $con->query($query);
 
                     while($row = $result->fetch_assoc()){
+
                         echo 
                             "<tr>
                                 <th colspan=2><h1>Invoice ID: ".$row["id"]."</h1></th>
@@ -33,6 +47,7 @@
                             </tr>
                             <tr>
                                 <td><a class='links' href='purchases_list.php'><input type='button' value='<< Back'></a></td>
+                                <td><a class='links' href='purchases_detail.php?id=".$row["id"]."&deliver=1'><input type='button' value='Change state'></a></td>
                             </tr>";
                     }
                 ?>

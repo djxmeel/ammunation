@@ -13,7 +13,7 @@
                 <th>Details</th>
             </tr>
             <?php
-                $query = "SELECT id, id_empleado, dni_cliente, fecha, importe, estado FROM compras";
+                $query = "SELECT id, id_empleado, dni_cliente, fecha, importe, estado FROM compras ORDER BY fecha DESC";
 
                 $result = $con->query($query);
 
